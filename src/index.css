@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	color: #303030;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+	--gradiente-naranja: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+}
+
+.cabecera {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4vh;
+	padding: 4vh 4vw;
+}
+
+.nav_principal a {
+	margin: 0 30px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.home {
+	width: 100%;
+	display: flex;
+	height: 88vh;
+}
+
+.info-home {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.info-home h1 {
+	font-size: 8em;
+}
+
+.nav_principal {
+	font-weight: 500;
+}
+
+.img-home {
+	width: 50%;
+}
+
+.img-home img {
+	margin-top: 50px;
+	width: 100%;
+}
+
+.raya-home {
+	width: 50px;
+	height: 5px;
+	border-radius: 5px;
+	background: #ff7c33;
+}
+
+.raya-iniciar-sesion {
+	margin-top: 2px;
+	width: 30px;
+	height: 3px;
+	border-radius: 5px;
+	background: #ff7c33;
+}
+
+.contenedor-login {
+	font-weight: 600;
+}
+
+.contenedor-informacion {
+	display: flex;
+}
+
+.informacion-boton {
+	width: 400px;
+	margin-left: 40px;
+	font-weight: 500;
+}
+
+.btn-primary {
+	width: 180px;
+	height: 40px;
+	background: var(--gradiente-naranja);
+	border-radius: 10px;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+.contenedor-img-login {
+	width: 40%;
+	padding-left: 10%;
+}
+
+.contenedor-img-login img {
+	width: 100%;
+	margin-top: 15%;
+}
+
+.contenedor-login-register {
+	width: 30%;
+	height: 80vh;
+	padding: 0 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor-formulario {
+	width: 100%;
+}
+
+.login-register {
+	display: flex;
+}
+
+.contenedor-login-register nav {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.contenedor-login-register input[type='email'],
+input[type='password'] {
+	margin: 15px 0;
+	height: 30px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #8f8f8f;
+	outline: none;
+	margin-bottom: 40px;
+}
+
+.contenedor-login-register button {
+	width: 100%;
+	height: 40px;
+	color: white;
+	background: var(--gradiente-naranja);
+	border: none;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 1em;
+	margin-top: 10px;
+}
+
+.selected {
+	font-weight: bold;
 }
