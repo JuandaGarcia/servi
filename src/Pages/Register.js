@@ -39,6 +39,10 @@ const Login = () => {
 						</nav>
 						<form action="">
 							<label>
+								Nombre <br />
+								<input className="input-login-register" type="text" /> <br />
+							</label>
+							<label>
 								Correo <br />
 								<input className="input-login-register" type="email" /> <br />
 							</label>
@@ -47,9 +51,14 @@ const Login = () => {
 								<input className="input-login-register" type="password" />{' '}
 								<br />
 							</label>
-							<Link className="button-submit" to="/hub">
+							<label>
+								Confirmar contraseña <br />
+								<input className="input-login-register" type="password" />{' '}
+								<br />
+							</label>
+							<button className="button-submit" onClick={''}>
 								Iniciar sesión
-							</Link>
+							</button>
 						</form>
 					</div>
 				</div>

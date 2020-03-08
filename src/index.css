@@ -7,6 +7,7 @@
 
 :root {
 	--gradiente-naranja: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+	--naranja: #ff7c33;
 }
 
 .cabecera {
@@ -59,7 +60,7 @@ a {
 	width: 50px;
 	height: 5px;
 	border-radius: 5px;
-	background: #ff7c33;
+	background: var(--naranja);
 }
 
 .raya-iniciar-sesion {
@@ -67,7 +68,7 @@ a {
 	width: 30px;
 	height: 3px;
 	border-radius: 5px;
-	background: #ff7c33;
+	background: var(--naranja);
 }
 
 .contenedor-login {
@@ -128,8 +129,7 @@ a {
 	margin-bottom: 40px;
 }
 
-.contenedor-login-register input[type='email'],
-input[type='password'] {
+.input-login-register {
 	margin: 15px 0;
 	height: 30px;
 	width: 100%;
@@ -139,7 +139,20 @@ input[type='password'] {
 	margin-bottom: 40px;
 }
 
-.contenedor-login-register button {
+.input-trabaja {
+	margin: 5px 0;
+	height: 30px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #8f8f8f;
+	outline: none;
+	margin-bottom: 40px;
+}
+
+.button-submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 40px;
 	color: white;
@@ -153,4 +166,188 @@ input[type='password'] {
 
 .selected {
 	font-weight: bold;
+}
+
+.circulo-exit {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: var(--naranja);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circulo-exit img {
+	width: 40%;
+}
+
+.servicios {
+	display: flex;
+}
+
+.contenedor-img {
+	width: 60%;
+}
+
+.contenedor-img img {
+	width: 100%;
+}
+
+.contenedor-info-servicios {
+	width: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 80px;
+}
+
+.contenedor-info-servicios h1 {
+	font-size: 5em;
+}
+
+.contenedor-info-servicios p {
+	margin-top: 10px;
+}
+
+.contenedor-info-servicios a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--naranja);
+	border: 2px solid var(--naranja);
+	border-radius: 10px;
+	height: 40px;
+	width: 150px;
+	margin-top: 20px;
+}
+
+.contenedor-mision-vision {
+	display: flex;
+	margin-top: 40px;
+	justify-content: space-between;
+}
+
+.item-mision-vision {
+	width: 45%;
+}
+
+.trabaja-con-nosotros {
+	display: flex;
+}
+
+.contenedor-info-trabaja {
+	width: 50%;
+	padding: 80px;
+}
+
+.contenedor-info-trabaja h1 {
+	font-size: 5em;
+}
+.contenedor-info-trabaja p {
+	font-size: 2em;
+}
+
+.contenedor-formulario-trabaja {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.contenedor-formulario-trabaja form {
+	width: 65%;
+}
+
+.contenedor-hub {
+	display: flex;
+	height: 100vh;
+}
+
+.infomacion-hub {
+	width: 70%;
+	height: 100%;
+	padding: 5%;
+}
+
+.logo {
+	font-size: 2em;
+}
+
+.infomacion-hub input {
+	width: 60%;
+	height: 35px;
+	padding: 0 15px;
+	border-radius: 5px;
+	border: none;
+	background-color: #ececec;
+	outline: none;
+}
+
+.contenodor-naranja {
+	width: 30%;
+	height: 100%;
+	background-color: #fda483;
+	border-bottom-left-radius: 50px;
+	padding: 5%;
+}
+
+.logo-input-hub {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nombre-persona {
+	font-size: 1.5em;
+	color: white;
+	font-weight: bold;
+}
+
+.nombre-foto {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.nombre-foto-img {
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+	border-radius: 15px;
+}
+
+.nombre-foto-img img {
+	object-fit: cover;
+	height: 100%;
+}
+
+.contenodor-naranja-img {
+	width: 80%;
+	margin-top: 50px;
+}
+
+.categoria {
+	display: flex;
+	align-items: center;
+	height: 5%;
+	border-radius: 15px;
+	width: calc(100%-10%);
+	background: var(--gradiente-naranja);
+	margin: 30px 0;
+	padding: 5%;
+}
+
+.categoria span {
+	color: white;
+}
+
+.nombre-categoria {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.contenedor-componentes-hub {
+	width: 100%;
+	flex-direction: column;
 }

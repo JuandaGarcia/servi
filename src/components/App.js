@@ -5,20 +5,20 @@ import Servicios from '../Pages/Servicios'
 import Trabaja from '../Pages/Trabaja'
 import Sobre from '../Pages/Sobre'
 import Login from '../Pages/Login'
-import Layout from './Layout'
+import Register from '../Pages/Register'
+import HubApp from '../Pages/HubApp'
 
 const App = () => {
 	return (
 		<BrowserRouter>
 			<Switch>
-				<Layout>
-					<Route exact path="/" component={Home} />
-					<Route exact path="/servicios" component={Servicios} />
-					<Route exact path="/trabaja-con-nosotros" component={Trabaja} />
-					<Route exact path="/sobre-servi" component={Sobre} />
-					<Route exact path="/login" component={Login} />
-					<Route exact path="/register" component={Login} />
-				</Layout>
+				<Route exact path="/" component={Home} />
+				<Route exact path="/servicios" component={Servicios} />
+				<Route exact path="/trabaja-con-nosotros" component={Trabaja} />
+				<Route exact path="/sobre-servi" component={Sobre} />
+				<Route exact path="/login" component={Login} />
+				<Route exact path="/register" component={Register} />
+				<Route exact path="/hub" component={HubApp} />
 			</Switch>
 		</BrowserRouter>
 	)
