@@ -7,6 +7,9 @@ import Sobre from '../Pages/Sobre'
 import Login from '../Pages/Login'
 import Register from '../Pages/Register'
 import HubApp from '../Pages/HubApp'
+import InfoServicio from '../Pages/InfoServicio'
+import AdminServicios from '../Pages/AdminServicios'
+import AdminUsers from '../Pages/AdminUsers'
 
 const App = () => {
 	return (
@@ -18,6 +21,13 @@ const App = () => {
 				<Route exact path="/sobre-servi" component={Sobre} />
 				<Route exact path="/login" component={Login} />
 				<Route exact path="/register" component={Register} />
+				<Route
+					exact
+					path="/hub/servicios/:idServicio"
+					component={InfoServicio}
+				/>
+				<Route exact path="/admin/users" component={AdminUsers} />
+				<Route exact path="/admin/servicios" component={AdminServicios} />
 				<Route exact path="/hub" component={HubApp} />
 			</Switch>
 		</BrowserRouter>
