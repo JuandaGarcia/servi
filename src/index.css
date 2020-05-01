@@ -365,6 +365,74 @@ a {
 	flex-direction: column;
 }
 
+.admin{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0px;
+	border: solid #5e5c5c4d 1px;
+}
+
+.admin h1{
+	padding-left: 50px;
+}
+
+.AdminNavBar{
+	display: flex;
+}
+
+.nari{
+	color: var(--naranja);
+}
+
+.AdminNavBar h3{
+	padding-right: 50px;
+}
+
+.panel_central{
+	display: flex;
+	justify-content: center;
+}
+.panel_central div h1{
+	padding-right: 100px;
+	padding-left: 100px;
+	padding-top: 50px;
+	font-size: 50px;
+}
+
+.panel_central div input{
+	padding: 3%;
+	width: 100%;
+	margin-top: 50px;
+	background: #ECECEC;
+	color: #616161;
+	border: none;
+	border-radius: 5px;
+	
+}
+
+.fichero{
+	display: flex;
+	background: #ECECEC;
+	border-radius: 10px;
+	padding: 20px;
+	font-size: 30px;
+	margin: 0px 30px 0px 30px;
+}
+
+.fichero img{
+	width: 50px;
+	padding: 10px;
+}
+
+.rendijas {
+	margin-top: 20px;
+	display: grid;
+	grid-row-gap: 50px;
+	grid-template-columns: auto auto auto;
+	padding: 50px;
+  }
+=======
+
 .alert-form {
 	color: #ff7839;
 	font-size: 12px;
@@ -464,3 +532,4 @@ input::-webkit-inner-spin-button {
 	font-weight: bold;
 	font-size: 2em;
 }
+
