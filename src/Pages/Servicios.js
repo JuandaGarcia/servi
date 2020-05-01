@@ -8,7 +8,7 @@ const Servicios = () => {
 			<Navbar />
 			<div className="servicios">
 				<div className="contenedor-img">
-					<img src="http://web.juandagarcia.com/img/servicios.png" alt="" />
+					<img src="/img/servicios.png" alt="" />
 				</div>
 				<div className="contenedor-info-servicios">
 					<div>
