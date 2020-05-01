@@ -27,10 +27,7 @@ const Home = () => {
 					</div>
 				</div>
 				<div className="img-home">
-					<img
-						src="http://web.juandagarcia.com/img/img-home.png"
-						alt="img-home"
-					/>
+					<img src="/img/img-home.png" alt="img-home" />
 				</div>
 			</div>
 		</React.Fragment>

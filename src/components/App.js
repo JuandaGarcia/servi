@@ -10,6 +10,10 @@ import HubApp from '../Pages/HubApp'
 import InfoServicio from '../Pages/InfoServicio'
 import AdminServicios from '../Pages/AdminServicios'
 import AdminUsers from '../Pages/AdminUsers'
+import Welcome from '../Pages/Welcome'
+import HubPrestador from '../Pages/HubPrestador'
+import LoginAdmin from '../Pages/LoginAdmin'
+import BienvenidaPrestador from '../Pages/WelcomePrestador'
 
 const App = () => {
 	return (
@@ -21,6 +25,14 @@ const App = () => {
 				<Route exact path="/sobre-servi" component={Sobre} />
 				<Route exact path="/login" component={Login} />
 				<Route exact path="/register" component={Register} />
+				<Route exact path="/welcome" component={Welcome} />
+				<Route exact path="/admin" component={LoginAdmin} />
+				<Route exact path="/prestador/hub" component={HubPrestador} />
+				<Route
+					exact
+					path="/prestador/welcome"
+					component={BienvenidaPrestador}
+				/>
 				<Route
 					exact
 					path="/hub/servicios/:idServicio"
