@@ -365,61 +365,61 @@ a {
 	flex-direction: column;
 }
 
-.admin{
+.admin {
 	display: flex;
 	justify-content: space-between;
 	padding: 30px 0px;
 	border: solid #5e5c5c4d 1px;
 }
 
-.admin h1{
+.admin h1 {
 	padding-left: 50px;
 }
 
-.AdminNavBar{
+.AdminNavBar {
 	display: flex;
 }
 
-.nari{
+.nari {
 	color: var(--naranja);
 }
 
-.AdminNavBar h3{
+.AdminNavBar h3 {
 	padding-right: 50px;
 }
 
-.panel_central{
+.panel_central {
 	display: flex;
 	justify-content: center;
 }
-.panel_central div h1{
+.panel_central div h1 {
 	padding-right: 100px;
 	padding-left: 100px;
 	padding-top: 50px;
 	font-size: 50px;
 }
 
-.panel_central div input{
+.panel_central div input {
 	padding: 3%;
 	width: 100%;
 	margin-top: 50px;
-	background: #ECECEC;
+	background: #ececec;
 	color: #616161;
 	border: none;
 	border-radius: 5px;
-	
 }
 
-.fichero{
+.fichero {
 	display: flex;
-	background: #ECECEC;
+	background: #ececec;
 	border-radius: 10px;
 	padding: 20px;
 	font-size: 30px;
 	margin: 0px 30px 0px 30px;
+	cursor: pointer;
 }
 
-.fichero img{
+.fichero img {
 	width: 50px;
 	padding: 10px;
 }
@@ -430,9 +430,7 @@ a {
 	grid-row-gap: 50px;
 	grid-template-columns: auto auto auto;
 	padding: 50px;
-  }
-=======
-
+}
 .alert-form {
 	color: #ff7839;
 	font-size: 12px;
@@ -532,4 +530,3 @@ input::-webkit-inner-spin-button {
 	font-weight: bold;
 	font-size: 2em;
 }
-
