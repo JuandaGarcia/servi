@@ -10,6 +10,8 @@ import HubApp from '../Pages/HubApp'
 import InfoServicio from '../Pages/InfoServicio'
 import AdminServicios from '../Pages/AdminServicios'
 import AdminUsers from '../Pages/AdminUsers'
+import CrearServicio from '../Pages/CrearServicio'
+import Hub2 from '../Pages/Hub2'
 import Welcome from '../Pages/Welcome'
 import HubPrestador from '../Pages/HubPrestador'
 import LoginAdmin from '../Pages/LoginAdmin'
@@ -41,6 +43,8 @@ const App = () => {
 				<Route exact path="/admin/users" component={AdminUsers} />
 				<Route exact path="/admin/servicios" component={AdminServicios} />
 				<Route exact path="/hub" component={HubApp} />
+				<Route exact path="/CrearServicio" component={CrearServicio} />
+				<Route exact path="/hub2" component={Hub2} />
 			</Switch>
 		</BrowserRouter>
 	)
