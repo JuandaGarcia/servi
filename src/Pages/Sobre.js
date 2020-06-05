@@ -7,7 +7,7 @@ const Sobre = () => {
 			<Navbar />
 			<div className="servicios">
 				<div className="contenedor-img">
-					<img src="http://web.juandagarcia.com/img/sobre-servi.png" alt="" />
+					<img src="/img/sobre-servi.png" alt="" />
 				</div>
 				<div className="contenedor-info-servicios">
 					<div>

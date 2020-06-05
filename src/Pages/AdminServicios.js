@@ -1,7 +1,7 @@
 import React from 'react'
-
+import NavBar from '../components/AdminNavBar'
 const AdminServicios = () => {
-	return <h1>AdminServicios</h1>
+	return
 }
 
 export default AdminServicios

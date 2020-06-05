@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
+import jwt_decode from 'jwt-decode'
 
-const Categoria = props => {
+const Categoria = (props) => {
 	return (
 		<Link className="categoria" to="/hub">
 			<div>
@@ -13,9 +14,20 @@ const Categoria = props => {
 }
 
 const HubApp = () => {
-	const [placeholderBusqueda, setPlaceholderBusqueda] = useState(
-		'Buscar categoria'
-	)
+	const [name, setName] = useState('')
+
+	useEffect(() => {
+		if (localStorage.usertoken) {
+			const token = localStorage.usertoken
+			const decoded = jwt_decode(token)
+			setName(decoded.nombre)
+		}
+		return () => {}
+	}, [])
+
+	if (!localStorage.usertoken) {
+		return <Redirect to="/" />
+	}
 
 	return (
 		<div className="contenedor-hub">
@@ -24,7 +36,7 @@ const HubApp = () => {
 					<Link to="/">
 						<span className="logo">Servi</span>
 					</Link>
-					<input placeholder={placeholderBusqueda} type="text" />
+					<input placeholder={'Buscar categoria'} type="text" />
 				</div>
 				<div className="contenedor-componentes-hub">
 					<Categoria nombreCategoria={'Fontanería'} catidadServicios={5} />
@@ -34,16 +46,12 @@ const HubApp = () => {
 			</div>
 			<div className="contenodor-naranja">
 				<div className="nombre-foto">
-					<span className="nombre-persona">Nairo Quintana</span>
+					<span className="nombre-persona">{name}</span>
 					<div className="nombre-foto-img">
-						<img src="http://web.juandagarcia.com/img/nairo.jpg" alt="" />
+						<img src="/img/profile.jpg" alt="" />
 					</div>
 				</div>
-				<img
-					className="contenodor-naranja-img"
-					src="http://web.juandagarcia.com/img/corre.png"
-					alt=""
-				/>
+				<img className="contenodor-naranja-img" src="/img/corre.png" alt="" />
 			</div>
 		</div>
 	)

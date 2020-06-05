@@ -19,7 +19,7 @@ const Header = () => {
 	)
 }
 
-const Login = (props) => {
+const LoginAdmin = (props) => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [alertEmail, setAlertEmail] = useState(false)
@@ -90,25 +90,18 @@ const Login = (props) => {
 		setBlockButton(false)
 	}
 
-	if (localStorage.usertoken) {
-		return <Redirect to="/hub" />
-	}
-
 	return (
 		<React.Fragment>
 			<Header />
 			<div className="login-register">
 				<div className="contenedor-img-login">
-					<img src="/img/img-login.png" alt="img-login" />
+					<img src="/img/admin.png" alt="img-login" />
 				</div>
 				<div className="contenedor-login-register">
 					<div className="contenedor-formulario">
 						<nav>
-							<NavLink to="/login" activeClassName="selected">
+							<NavLink to="/admin" activeClassName="selected">
 								Iniciar sesión
-							</NavLink>
-							<NavLink to="/register" activeClassName="selected">
-								Registrarse
 							</NavLink>
 						</nav>
 						<form
@@ -153,7 +146,7 @@ const Login = (props) => {
 								</div>
 							) : (
 								<input
-									className="button-submit"
+									className="button-submit-admin"
 									type="submit"
 									value="Iniciar sesión"
 								/>
@@ -166,4 +159,4 @@ const Login = (props) => {
 	)
 }
 
-export default Login
+export default LoginAdmin
