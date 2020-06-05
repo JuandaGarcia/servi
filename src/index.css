@@ -8,6 +8,7 @@
 :root {
 	--gradiente-naranja: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
 	--naranja: #ff7c33;
+	--gradiente-azul: linear-gradient(90deg, rgba(0, 210, 255, 0.9) 0%, rgba(58, 123, 213, 0.9) 100%);
 }
 
 .cabecera {
@@ -351,3 +352,294 @@ a {
 	width: 100%;
 	flex-direction: column;
 }
+
+/* informacion servicio */
+.InfoServicio{
+	display: flex;
+}
+
+.contenedor-img-servicio {
+	background-image: url('/img/cerra.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 130vw;
+	height: 100vh;
+}
+
+.contenedor-img-servicio h1 {
+	position: absolute;
+	top: 50px;
+	left: 90px;
+	color: white;
+}
+.contenedor-img-servicio h3{
+	position: absolute;
+	top: 580px;
+	left: 90px;
+	color: white;
+}
+.raya-home {
+	float: right;
+	width: 40%;
+	margin-top: 590px;
+	margin-right: 40px;
+}
+
+.informacion-detallada {
+	margin-top: 50px;
+}
+
+.circulo-exit {
+	float: right;
+	margin-right: 90px;
+}
+
+.informacion-detallada h1 {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 3em;
+}
+
+.informacion-detallada p {
+	margin-top: 40px;
+	margin-left: 90px;
+	margin-right: 100px;
+}
+
+.usuario {
+	display: flex;
+}
+
+.estrellitas {
+	display: flex;
+}
+
+.estrellitas img {
+	margin-left: 88px;
+	height: 50px;
+	width: 90px;
+}
+
+.estrellitas p {
+	margin-top: 20px;
+	margin-left: 207px;
+}
+
+
+
+.btn-servicio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 35%;
+	height: 40px;
+	margin-left: 30%;
+	color: white;
+	background: var(--gradiente-naranja);
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 1em;
+	margin-top: 40px;
+}
+
+/* crear servicio */
+
+.crear-servicio {
+	display: flex;
+}
+
+.contenedor-izquierdo {
+	background-image: url('/img/cerra.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 30vw;
+	height: 100vh;
+}
+.contenedor-izquierdo h1 {
+	position: absolute;
+	top: 50px;
+	left: 90px;
+	color: white;
+}
+
+.contenedor-izquierdo h3{
+	position: absolute;
+	top: 580px;
+	left: 90px;
+	color: white;
+}
+
+.raya-home {
+	float: right;
+	width: 40%;
+	margin-top: 590px;
+	margin-right: 40px;
+}
+
+.texto-boton {
+	display: flex;
+	margin-top: 30px;
+}
+
+.texto-boton h1 {
+	font-size: 3em;
+	margin-left: 160px;	
+	margin-top: 30px;
+	color: black;
+}
+
+.circulo-exit {
+	margin-left: 250px;
+}
+
+.formulario-crear-servicio {
+	margin-left: 140px;
+	margin-top: 30px;
+}
+
+.input-crear-servicio {
+	text-align: initial;
+	height: 25px;
+	width: 450px;
+	background-color: #ececec;
+	padding: 4px;
+	padding-left: 20px;
+	border-radius: 5px;
+	border: none;
+	margin: 12px;
+}
+
+.input-crear-servicio-grande {
+	background-color: #ececec;
+	border-radius: 5px;
+	border: none;
+	height: 40px;
+	width: 455px;
+	margin-left: 11px;
+	margin: 12px;
+	padding-left: 20px;
+	padding-bottom: 70px;
+	text-align: initial;
+}
+
+.boton-crear-servicio {
+	margin-left: -120px;
+}
+
+/* hub 2 */
+
+.contenedor-hub2{
+	display: flex;
+}
+
+.contenedor-izquierdo-hub2{
+	margin-left: 80px;
+	margin-top: 50px;
+}
+
+.servi_y_buscar {
+	display: flex;
+}
+
+.servi_y_buscar h1 {
+	color: black;
+	font-size: 2.5em;
+}
+
+.buscar-servicio {
+	margin-top: 10px;
+	margin-left: 60px;
+	background-color: #ececec;
+	border-radius: 5px;
+	border: none;
+	height: 35px;
+	width: 517px;
+	padding-left: 30px;
+	
+}
+
+.botenes-azules {
+	margin-top: 80px;
+}
+
+.btn-azul {
+	width: 680px;
+	height: 120px;
+	background: var(--gradiente-azul);
+	border-radius: 10px;
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 3em;
+	font-weight: bold;
+	
+}
+
+.contenedor-derecho-hub2{
+	background-color: #87a9ff;
+	width: 50vw;
+	height: 100vh;
+	margin-left: 200px;
+}
+
+.nombre-foto-hubAzul {
+	display: flex;
+	margin-top: 60px;
+	margin-left: 100px;
+	
+}
+
+.nombre-foto-hubAzul h2{
+	color: white;
+}
+
+.nombre-foto-hubAzul img{
+	border-radius: 8px;
+	height: 40px;
+	width: 40px;
+	margin-left: 20px;
+	margin-top: -5px;
+	align-items: center;
+}
+
+.imagen-contenedor-azul-hub2 {
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+.imagen-contenedor-azul-hub2 img{
+	height: 70%;
+	width: 70%;
+}
+
+.boton-pedidos {
+	background-color: white;
+	padding: 7px;
+	border-radius: 5px;
+	width: 50%;
+	height: 25px;
+	margin-left: 100px;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.hora-azul h2 {
+	color: white;
+	font-size: 1.9em;
+	margin-left: 150px;
+	margin-top: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
