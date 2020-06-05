@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Router } from 'react-router-dom'
 import Home from '../Pages/Home'
 import Servicios from '../Pages/Servicios'
 import Trabaja from '../Pages/Trabaja'
@@ -14,6 +14,9 @@ import Welcome from '../Pages/Welcome'
 import HubPrestador from '../Pages/HubPrestador'
 import LoginAdmin from '../Pages/LoginAdmin'
 import BienvenidaPrestador from '../Pages/WelcomePrestador'
+import Miservicio from '../Pages/misservicios'
+import Pedidos from '../Pages/pedidos'
+import Listaprestador from '../Pages/listaprestadores'
 
 const App = () => {
 	return (
@@ -41,6 +44,11 @@ const App = () => {
 				<Route exact path="/admin/users" component={AdminUsers} />
 				<Route exact path="/admin/servicios" component={AdminServicios} />
 				<Route exact path="/hub" component={HubApp} />
+				
+				<Route exact path="/prestador/misservicios" component={Miservicio}/>
+				<Route exact path="/prestador/pedidos" component={Pedidos}/>
+				<Route exact path="/prestador/listaprestador" component={Listaprestador}/>
+
 			</Switch>
 		</BrowserRouter>
 	)

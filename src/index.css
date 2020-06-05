@@ -431,6 +431,7 @@ a {
 	grid-template-columns: auto auto auto;
 	padding: 50px;
 }
+
 .alert-form {
 	color: #ff7839;
 	font-size: 12px;
@@ -529,4 +530,184 @@ input::-webkit-inner-spin-button {
 .hub-prestador span {
 	font-weight: bold;
 	font-size: 2em;
+}
+
+
+.contenedor-miservicios{
+	display: flex;
+	height: 100vh;
+}
+
+.miservicios{
+	width: 70%;
+	margin: 3%;
+}
+
+.misservicios-encabezado{
+	
+	margin: 3%;
+	display: flex;
+	
+}
+
+.misservicios-encabezado img{
+	height: 20%;
+	width: 20%;
+}
+
+.misservicios-encabezado input{
+	margin: 0% 10%;
+	width: 100%;
+	height: 10%;
+	border: 0px solid #ECECEC;
+	background: #ECECEC;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+.fondo-azul{
+	background: #87A8FF;
+	width: 30%;
+	border-radius:  0px 0px 0px 50px;
+	height: 100%;
+}
+
+.img-correr{
+	display: flex;
+	height: 40%;
+	width: 80%;
+	margin: 10%;
+}
+.fondo-azul button{
+	background: none;
+	border: 3px solid white;
+	border-radius: 5px;
+	width: 60%;
+	font-size: 150%;
+	color: white;
+	cursor: pointer;
+}
+
+.fondo-azul button:hover{
+	color: #87A8FF;
+	background: white;
+	transition: all 400ms;
+}
+
+.boton-h1 h1{
+	color: white;
+}
+
+.misservicios-abajo{
+	margin: 7% 10% 0% 10%;
+}
+.misservicios-abajo h1{
+	margin: 20px 0px 40px 0px;
+	display: flex;
+	justify-content: center;
+}
+
+.linea-gris{
+	width: 100%;
+	border: 5px solid #ECECEC;
+	border-radius: 5px;
+}
+
+.nombre-imagen{
+	display: flex;
+	justify-content: center;
+	margin: 10% 5% 0 5%;
+}
+
+.nombre-imagen h1{
+	color: white;
+
+}
+
+.nombre-imagen img{
+	height: 5vh;
+	width: 7vh;
+	border-radius: 10px;
+	margin: 0 0 0 10vh;
+}
+.boton-h1{
+	display: flex;
+	justify-content: center;
+	margin: 15%;
+}
+
+
+
+.ficheroS {
+	display: flex;
+	background: #ececec;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.botones img{
+	height: 30px;
+	width: 30px;
+	
+}
+.botones button{
+	margin: 5px;
+	border: none;
+	cursor: pointer;
+}
+.botones{
+	
+}
+
+.h2-h5{
+	padding: 8px;
+}
+
+
+.rendijasS {
+	margin-top: 20px;
+	display: grid;
+	grid-row-gap: 50px;
+	grid-template-columns: auto auto auto;
+}
+
+.ficheroSS {
+	display: flex;
+	background: #ececec;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	width: 100%;
+}
+.h2-h5S{
+	padding: 8px;
+	width: 90%;
+	font-size: 30px;
+}
+.botonesS{
+	
+}
+.botonesS button{
+	margin: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+.botonesS img{
+	height: 30px;
+	width: 30px;
+	
+}
+
+.ficheroSSS {
+	display: flex;
+	background: #ececec;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+.ficheroSSS img{
+	height: 100%;
+	width: 40%;
 }
