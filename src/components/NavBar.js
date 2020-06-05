@@ -5,7 +5,7 @@ const NavBar = () => {
 	return (
 		<header className="cabecera">
 			<Link to="/">
-				<h1>Servi</h1>
+				<img className="nav-logo" src="/img/logo.png" alt="Servi" />
 			</Link>
 			<nav className="nav_principal">
 				<NavLink activeClassName="selected" to="/servicios">
