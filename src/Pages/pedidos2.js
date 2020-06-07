@@ -25,9 +25,7 @@ const App = (props) => {
 	}, [])
 
 	const traerDatos = async (e) => {
-		const response = await axios.get(
-			`http://localhost:5000/pedidos/prestador/${e}`
-		)
+		const response = await axios.get(`http://localhost:5000/pedidos/user/${e}`)
 		setData(response.data)
 	}
 
@@ -35,7 +33,7 @@ const App = (props) => {
 		<div className="contenedor-miservicios">
 			<div className="miservicios">
 				<div className="misservicios-encabezado">
-					<Link to="/prestador">
+					<Link to="/user">
 						<img src="/img/logo.png" alt="Sevi" />
 					</Link>
 				</div>
@@ -62,7 +60,11 @@ const App = (props) => {
 				</div>
 			</div>
 
-			<Fondo boton={'Pedidos'} user={'Kevin Guerrero'} clase={'fondo-azul'} />
+			<Fondo
+				boton={'Servicios solicitados'}
+				user={'Kevin Guerrero'}
+				clase={'fondo-naranja'}
+			/>
 		</div>
 	)
 }

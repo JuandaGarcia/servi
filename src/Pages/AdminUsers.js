@@ -3,6 +3,7 @@ import NavBar from '../components/AdminNavBar'
 import Fichero from '../components/fichero'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { Redirect } from 'react-router-dom'
 
 const AdminUsers = () => {
 	const [data, setData] = useState([])
@@ -100,13 +101,16 @@ const AdminUsers = () => {
 			})
 	}
 
+	if (!localStorage.admin) {
+		return <Redirect to="/admin" />
+	}
+
 	return (
 		<div>
 			<NavBar />
 			<div className="panel_central">
 				<div>
 					<h1>Usuarios nuevos</h1>
-					<input type="text" />
 				</div>
 			</div>
 

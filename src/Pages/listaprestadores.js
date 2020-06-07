@@ -1,41 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Fondo from '../components/fondo'
 import Fichero from '../components/ficherolistaprestadores'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
-const app = () =>{
-    return(
-        <div className="contenedor-miservicios">
-            
-            <div className="miservicios">
-                <div className ="misservicios-encabezado">
-                    <img src="http://localhost:3000/img/logo.png"/>
-                    <input type="text" />
-                </div>
+const App = (props) => {
+	const categoria = props.match.params.categoria
+	const [data, setData] = useState([])
 
-                <div className="misservicios-abajo">
-                    <h1>
-                        Cerrajería
-                    </h1>
+	useEffect(() => {
+		traerDatos()
+	}, [])
 
-                    <div className="linea-gris"/>
+	const traerDatos = async () => {
+		const resposnse = await axios.get(
+			`http://localhost:5000/servicios/categoria/${categoria}`
+		)
+		setData(resposnse.data)
+	}
 
-                    <div className = "rendijas">
-                        
-                        <Fichero/>
-                        <Fichero/>
-                        <Fichero/>
-                        <Fichero/>
-                    </div>
-                </div>
-            </div>
+	return (
+		<div className="contenedor-miservicios">
+			<div className="miservicios">
+				<div className="misservicios-encabezado">
+					<Link to="/user">
+						<img src="/img/logo.png" alt="Sevi" />
+					</Link>
+				</div>
 
+				<div className="misservicios-abajo">
+					<h1>{categoria}</h1>
 
+					<div className="linea-gris" />
 
+					<div className="rendijas">
+						{data.map((servicio) => {
+							return <Fichero key={servicio._id} servicio={servicio} />
+						})}
+					</div>
+				</div>
+			</div>
 
-            <Fondo user={'kevin guerrero'} boton={"servicios solicitados"}/>
-
-        </div>
-    )
+			<Fondo
+				user={'kevin guerrero'}
+				boton={'Servicios solicitados'}
+				clase={'fondo-naranja'}
+			/>
+		</div>
+	)
 }
 
-export default app;
+export default App

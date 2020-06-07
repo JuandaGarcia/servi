@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
+import Fondo from '../components/fondo'
 
 const Categoria = (props) => {
 	return (
@@ -30,29 +31,30 @@ const HubApp = () => {
 	}
 
 	return (
-		<div className="contenedor-hub">
-			<div className="infomacion-hub">
-				<div className="logo-input-hub">
-					<Link to="/">
-						<span className="logo">Servi</span>
+		<div className="contenedor-miservicios">
+			<div className="miservicios">
+				<div className="misservicios-encabezado">
+					<Link to="/user">
+						<img src="/img/logo.png" alt="Sevi" />
 					</Link>
-					<input placeholder={'Buscar categoria'} type="text" />
 				</div>
-				<div className="contenedor-componentes-hub">
-					<Categoria nombreCategoria={'Fontanería'} catidadServicios={5} />
-					<Categoria nombreCategoria={'Cerrajería'} catidadServicios={7} />
-					<Categoria nombreCategoria={'Mantenimiento'} catidadServicios={4} />
+				<div className="botenes-azules">
+					<Link to="/user/servicio/Fontanería">
+						<div className="btn-naranja">Fontanería</div>
+					</Link>
+					<Link to="/user/servicio/Cerrajería">
+						<div className="btn-naranja">Cerrajería</div>
+					</Link>
+					<Link to="/user/servicio/Mantenimiento">
+						<div className="btn-naranja">Mantenimiento</div>
+					</Link>
 				</div>
 			</div>
-			<div className="contenodor-naranja">
-				<div className="nombre-foto">
-					<span className="nombre-persona">{name}</span>
-					<div className="nombre-foto-img">
-						<img src="/img/profile.jpg" alt="" />
-					</div>
-				</div>
-				<img className="contenodor-naranja-img" src="/img/corre.png" alt="" />
-			</div>
+			<Fondo
+				boton={'Servicios solicitados'}
+				user={'Kevin Guerrero'}
+				clase={'fondo-naranja'}
+			/>
 		</div>
 	)
 }

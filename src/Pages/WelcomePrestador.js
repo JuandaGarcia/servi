@@ -37,7 +37,7 @@ const BienvenidaPrestador = () => {
 						<br />
 						Este proceso puede tardar hasta 12 horas.
 					</p>
-					<Link to="/prestador/hub">
+					<Link to="/prestador/">
 						<div className="welcome-btn">Aceptar</div>
 					</Link>
 				</div>

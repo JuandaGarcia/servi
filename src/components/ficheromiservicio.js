@@ -1,8 +1,16 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const app = ({ NombreServicio, NombrePersona, id, setData, email }) => {
+const app = ({
+	NombreServicio,
+	NombrePersona,
+	id,
+	setData,
+	email,
+	history,
+}) => {
 	const Modal = (id) => {
 		Swal.fire({
 			title: `¿Estas seguro que quieres eliminar este servicio?`,
@@ -35,9 +43,11 @@ const app = ({ NombreServicio, NombrePersona, id, setData, email }) => {
 			</div>
 
 			<div className="botones">
-				<button>
-					<img src="http://localhost:3000/img/edit.png" alt="" />
-				</button>
+				<Link to={`/prestador/EditarServicio/${id}`}>
+					<button>
+						<img src="http://localhost:3000/img/edit.png" alt="" />
+					</button>
+				</Link>
 				<button onClick={() => Modal(id)}>
 					<img src="http://localhost:3000/img/delete.png" alt="" />
 				</button>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import Loader from '../components/Loader'
@@ -216,6 +216,9 @@ const Trabaja = (props) => {
 								value="Crear cuenta"
 							/>
 						)}
+						<Link to="/login/prestador">
+							<div className="is">Iniciar seción</div>
+						</Link>
 					</form>
 				</div>
 			</div>

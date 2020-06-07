@@ -6,7 +6,7 @@ const HubPrestador = () => {
 		<div className="hub-prestador">
 			<div>
 				<span>Tu cuenta está en proceso de verificación</span>
-				<Link to="/">
+				<Link to="/prestador">
 					<div className="welcome-btn">Ir al inicio</div>
 				</Link>
 			</div>

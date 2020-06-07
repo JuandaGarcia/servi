@@ -19,7 +19,7 @@ const Header = () => {
 	)
 }
 
-const Login = (props) => {
+const LoginPrestador = (props) => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [alertEmail, setAlertEmail] = useState(false)
@@ -43,7 +43,7 @@ const Login = (props) => {
 	const PostData = async () => {
 		setBlockButton(true)
 		await axios
-			.post('users/login', {
+			.post('http://localhost:5000/prestador/login', {
 				email: email.toLowerCase(),
 				password: password,
 			})
@@ -69,11 +69,11 @@ const Login = (props) => {
 						})
 					}
 				} else {
-					if (localStorage.prestador) {
-						localStorage.removeItem('prestador')
+					if (localStorage.usertoken) {
+						localStorage.removeItem('usertoken')
 					}
-					localStorage.setItem('usertoken', response.data)
-					props.history.push(`/user`)
+					localStorage.setItem('prestador', response.data)
+					props.history.push(`/prestador`)
 					return response.data
 				}
 			})
@@ -90,8 +90,8 @@ const Login = (props) => {
 		setBlockButton(false)
 	}
 
-	if (localStorage.usertoken) {
-		return <Redirect to="/user" />
+	if (localStorage.prestador) {
+		return <Redirect to="/prestador" />
 	}
 
 	return (
@@ -99,7 +99,7 @@ const Login = (props) => {
 			<Header />
 			<div className="login-register">
 				<div className="contenedor-img-login">
-					<img src="/img/img-login.png" alt="img-login" />
+					<img src="/img/sobre-servi.png" alt="img-login" />
 				</div>
 				<div className="contenedor-login-register">
 					<div className="contenedor-formulario">
@@ -107,7 +107,7 @@ const Login = (props) => {
 							<NavLink to="/login" activeClassName="selected">
 								Iniciar sesión
 							</NavLink>
-							<NavLink to="/register" activeClassName="selected">
+							<NavLink to="/trabaja-con-nosotros" activeClassName="selected">
 								Registrarse
 							</NavLink>
 						</nav>
@@ -166,4 +166,4 @@ const Login = (props) => {
 	)
 }
 
-export default Login
+export default LoginPrestador

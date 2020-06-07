@@ -43,7 +43,7 @@ const LoginAdmin = (props) => {
 	const PostData = async () => {
 		setBlockButton(true)
 		await axios
-			.post('users/login', {
+			.post('/admin/login', {
 				email: email.toLowerCase(),
 				password: password,
 			})
@@ -71,9 +71,10 @@ const LoginAdmin = (props) => {
 				} else {
 					if (localStorage.prestador) {
 						localStorage.removeItem('prestador')
+						localStorage.removeItem('usertoken')
 					}
-					localStorage.setItem('usertoken', response.data)
-					props.history.push(`/hub`)
+					localStorage.setItem('admin', response.data)
+					props.history.push(`/admin/users`)
 					return response.data
 				}
 			})
@@ -88,6 +89,10 @@ const LoginAdmin = (props) => {
 				})
 			})
 		setBlockButton(false)
+	}
+
+	if (localStorage.admin) {
+		return <Redirect to="/admin/users" />
 	}
 
 	return (

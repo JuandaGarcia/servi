@@ -4,14 +4,13 @@ import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 import Swal from 'sweetalert2'
 import Hora from '../components/Hora'
-import Welcome from './HubPrestador'
 
-const CrearServicio = (props) => {
+const EditarServicio = (props) => {
+	const id = props.match.params.id
 	const [nombreServicio, setNombreServicio] = useState('')
 	const [precio, setPrecio] = useState('')
 	const [categoria, setCategoria] = useState('')
 	const [descripcion, setDescripcion] = useState('')
-	const [aceptado, setAceptado] = useState('')
 
 	const [email, setEmail] = useState('')
 	const [nombreUsuario, setNombreUsuario] = useState('')
@@ -22,25 +21,34 @@ const CrearServicio = (props) => {
 			const decoded = jwt_decode(token)
 			setEmail(decoded.email)
 			setNombreUsuario(decoded.nombre)
-			setAceptado(decoded.aceptado)
+			traerDatos()
 		}
-		return () => {}
 	}, [])
 
+	const traerDatos = async () => {
+		const response = await axios.get(
+			`http://localhost:5000/servicios/one/${id}`
+		)
+		const data = response.data
+		setNombreServicio(data[0].nombre)
+		setPrecio(data[0].precio)
+		setDescripcion(data[0].descripcion)
+		setCategoria(data[0].categoria)
+	}
+
 	const EnviarDatos = async () => {
-		const response = await axios.post('http://localhost:5000/servicios/', {
+		const response = await axios.put('http://localhost:5000/servicios/', {
+			id: id,
 			nombre: nombreServicio,
 			descripcion: descripcion,
 			categoria: categoria,
 			precio: precio,
-			nombre_usuario: nombreUsuario,
-			email_usuario: email,
 		})
-		console.log(response)
+		console.log(response.data)
 		Swal.fire({
 			position: 'center',
 			icon: 'success',
-			title: 'El servicio se creó con éxito.',
+			title: 'El servicio se modificó con éxito.',
 			showConfirmButton: true,
 		}).then((result) => {
 			if (result.value) {
@@ -58,10 +66,6 @@ const CrearServicio = (props) => {
 		return <Redirect to="/" />
 	}
 
-	if (!aceptado) {
-		return <Welcome />
-	}
-
 	return (
 		<div className="crear-servicio">
 			<div className="contenedor-izquierdo">
@@ -76,8 +80,8 @@ const CrearServicio = (props) => {
 
 			<div className="contenedor-derecho">
 				<div className="texto-boton">
-					<h1>Crear un servicio</h1>
-					<Link to="/prestador">
+					<h1>Editar servicio</h1>
+					<Link to="/prestador/misservicios">
 						<div className="circulo-exit">
 							<img src="http://web.juandagarcia.com/img/x.svg" alt="X" />
 						</div>
@@ -93,6 +97,7 @@ const CrearServicio = (props) => {
 							className="input-crear-servicio"
 							placeholder="Nombre del servicio"
 							required
+							value={nombreServicio}
 							onChange={(e) => setNombreServicio(e.target.value)}
 							type="text"
 						/>
@@ -101,10 +106,11 @@ const CrearServicio = (props) => {
 						<select
 							name="select"
 							required
-							className="input-crear-servicio"
+							className="input-crear-servicio input-select"
 							onChange={(e) => setCategoria(e.target.value)}
+							defaultValue={categoria}
 						>
-							<option value="value1" selected disabled>
+							<option value="" disabled>
 								Categoría
 							</option>
 							<option value="Fontanería">Fontanería</option>
@@ -117,12 +123,14 @@ const CrearServicio = (props) => {
 							className="input-crear-servicio"
 							placeholder="Precio del servicio"
 							required
+							value={precio}
 							onChange={(e) => setPrecio(e.target.value)}
 							type="number"
 						/>
 					</div>
 					<div>
 						<textarea
+							value={descripcion}
 							className="input-crear-servicio-grande"
 							placeholder="Descripcion del servicio"
 							required
@@ -131,7 +139,7 @@ const CrearServicio = (props) => {
 						/>
 					</div>
 					<div className="boton-crear-servicio">
-						<button className="btn-servicio">Crear Servicio</button>
+						<button className="btn-servicio">Editar Servicio</button>
 					</div>
 				</form>
 			</div>
@@ -139,4 +147,4 @@ const CrearServicio = (props) => {
 	)
 }
 
-export default CrearServicio
+export default EditarServicio

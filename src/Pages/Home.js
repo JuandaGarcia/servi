@@ -11,7 +11,7 @@ const Home = () => {
 					<div>
 						<h1>Servi</h1>
 						<div className="contenedor-informacion">
-							<div className="raya-home"></div>
+							<div className="raya-home-home"></div>
 							<div className="informacion-boton">
 								<p>
 									Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
